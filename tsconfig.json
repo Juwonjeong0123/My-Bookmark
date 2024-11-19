@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES6",               // ES6 이상의 JavaScript로 변환
+    "module": "ESNext",            // ES 모듈 시스템 사용
+    "strict": true,                // 엄격한 타입 검사
+    "outDir": "./dist",            // 컴파일된 파일이 저장될 디렉토리
+    "rootDir": "./src"             // 소스 파일 디렉토리
+  },
+  "include": ["src/**/*"],         // 소스 디렉토리 포함
+  "exclude": ["node_modules"]      // node_modules 제외
+}
