@@ -1,0 +1,11 @@
+html {
+    background-image: url('../assets/backGround.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.tree {
+    transform: translate(15%, 20%);
+}

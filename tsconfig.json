@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES6",               // ES6 이상의 JavaScript로 변환
-    "module": "ESNext",            // ES 모듈 시스템 사용
-    "strict": true,                // 엄격한 타입 검사
-    "outDir": "./dist",            // 컴파일된 파일이 저장될 디렉토리
-    "rootDir": "./src"             // 소스 파일 디렉토리
+    "target": "ES2020",                // 최신 JavaScript 문법
+    "module": "NodeNext",              // Node.js 최신 ESM 방식 모듈
+    "moduleResolution": "NodeNext",    // Node.js 최신 모듈 해석
+    "jsx": "react-jsx",                // React JSX 지원
+    "strict": true,                    // 엄격한 타입 검사
+    "outDir": "./dist",                // 컴파일 출력 디렉토리
+    "rootDir": "./src",                // 소스 디렉토리
+    "baseUrl": "./src",                // 경로 설정
+    "paths": {                         // 경로 별칭
+      "@components/*": ["components/*"]
+    },
+    "esModuleInterop": true,           // CommonJS와 ESM 호환
+    "allowSyntheticDefaultImports": true // 디폴트 import 허용
   },
-  "include": ["src/**/*"],         // 소스 디렉토리 포함
-  "exclude": ["node_modules"]      // node_modules 제외
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
