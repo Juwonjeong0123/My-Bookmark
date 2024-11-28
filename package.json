@@ -6,6 +6,7 @@
   "homepage": "https://juwonjeong0123.site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -13,12 +14,12 @@
   "author": "정주원",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1"
+    "@types/react-dom": "^18.3.1",
+    "gh-pages": "^6.2.0"
   }
 }
