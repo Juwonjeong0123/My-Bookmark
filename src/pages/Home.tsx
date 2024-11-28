@@ -3,8 +3,8 @@ import React from "react";
 const Home: React.FC = () => {
   return (
     <main>
-      <h2>Home Page</h2>
-      <p>This is the home page of the application.</p>
+      <h1>드디어 빌드 성공</h1>
+      <p>코딩 === 정신병</p>
     </main>
   );
 };
