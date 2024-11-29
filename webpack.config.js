@@ -1,11 +1,11 @@
-const path = require("path");
+const path = require("path"); // 이 부분을 추가해야 합니다.
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development", // "production"으로 변경 가능
     entry: "./src/index.tsx", // 진입 파일
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "build"), // output 경로를 build로 변경
         filename: "bundle.js",
     },
     resolve: {
@@ -30,7 +30,7 @@ module.exports = {
         }),
     ],
     devServer: {
-        static: path.join(__dirname, "dist"), // 정적 파일 경로
+        static: path.join(__dirname, "build"), // 정적 파일 경로도 build로 변경
         port: 3000, // 개발 서버 포트
     },
 };
