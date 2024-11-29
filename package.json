@@ -1,38 +1,31 @@
 {
   "name": "my-site",
   "version": "1.0.0",
-  "description": "노드 설치하세요 게이야",
+  "description": "ㅁ?ㄹ",
   "main": "index.js",
   "homepage": "https://juwonjeong0123.site",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "react-scripts build",
+    "start": "webpack serve --open",
+    "build": "webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "정주원",
   "license": "ISC",
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "^5.0.1"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "gh-pages": "^6.2.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "gh-pages": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
