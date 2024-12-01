@@ -86,7 +86,27 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
   \*********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst RandomNumber_1 = __importDefault(__webpack_require__(/*! ./pages/RandomNumber */ \"./src/pages/RandomNumber.tsx\"));\nconst App = () => {\n    return (react_1.default.createElement(react_1.default.Fragment, null,\n        react_1.default.createElement(RandomNumber_1.default, null)));\n};\nexports[\"default\"] = App;\n\n\n//# sourceURL=webpack://my-site/./src/App.tsx?");
+eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    var desc = Object.getOwnPropertyDescriptor(m, k);\n    if (!desc || (\"get\" in desc ? !m.__esModule : desc.writable || desc.configurable)) {\n      desc = { enumerable: true, get: function() { return m[k]; } };\n    }\n    Object.defineProperty(o, k2, desc);\n}) : (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    o[k2] = m[k];\n}));\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\n}) : function(o, v) {\n    o[\"default\"] = v;\n});\nvar __importStar = (this && this.__importStar) || (function () {\n    var ownKeys = function(o) {\n        ownKeys = Object.getOwnPropertyNames || function (o) {\n            var ar = [];\n            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;\n            return ar;\n        };\n        return ownKeys(o);\n    };\n    return function (mod) {\n        if (mod && mod.__esModule) return mod;\n        var result = {};\n        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== \"default\") __createBinding(result, mod, k[i]);\n        __setModuleDefault(result, mod);\n        return result;\n    };\n})();\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importStar(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst TodoList_1 = __importDefault(__webpack_require__(/*! ./components/TodoList */ \"./src/components/TodoList.tsx\"));\nconst App = () => {\n    const [todos, setTodos] = (0, react_1.useState)([]);\n    const [input, setInput] = (0, react_1.useState)('');\n    const addTodo = () => {\n        if (input.trim()) {\n            setTodos([...todos, input.trim()]);\n            setInput('');\n        }\n    };\n    const deleteTodo = (indexToRemove) => {\n        setTodos(todos.filter((_, index) => index !== indexToRemove));\n    };\n    return (react_1.default.createElement(\"div\", { className: \"app\" },\n        react_1.default.createElement(\"h1\", null, \"Todo List\"),\n        react_1.default.createElement(\"input\", { type: \"text\", value: input, onChange: (e) => setInput(e.target.value), placeholder: \"Add a new todo\" }),\n        react_1.default.createElement(\"button\", { onClick: addTodo }, \"Add\"),\n        react_1.default.createElement(TodoList_1.default, { todos: todos, onDelete: deleteTodo })));\n};\nexports[\"default\"] = App;\n\n\n//# sourceURL=webpack://my-site/./src/App.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/TodoItem.tsx":
+/*!*************************************!*\
+  !*** ./src/components/TodoItem.tsx ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst TodoItem = ({ text, onDelete }) => {\n    return (react_1.default.createElement(\"li\", null,\n        text,\n        react_1.default.createElement(\"button\", { onClick: onDelete }, \"Delete\")));\n};\nexports[\"default\"] = TodoItem;\n\n\n//# sourceURL=webpack://my-site/./src/components/TodoItem.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/TodoList.tsx":
+/*!*************************************!*\
+  !*** ./src/components/TodoList.tsx ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst TodoItem_1 = __importDefault(__webpack_require__(/*! ./TodoItem */ \"./src/components/TodoItem.tsx\"));\nconst TodoList = ({ todos, onDelete }) => {\n    return (react_1.default.createElement(\"ul\", null, todos.map((todo, index) => (react_1.default.createElement(TodoItem_1.default, { key: index, text: todo, onDelete: () => onDelete(index) })))));\n};\nexports[\"default\"] = TodoList;\n\n\n//# sourceURL=webpack://my-site/./src/components/TodoList.tsx?");
 
 /***/ }),
 
@@ -97,16 +117,6 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst client_1 = __importDefault(__webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\"));\nconst App_1 = __importDefault(__webpack_require__(/*! ./App */ \"./src/App.tsx\"));\nconst root = client_1.default.createRoot(document.getElementById(\"root\"));\nroot.render(react_1.default.createElement(react_1.default.StrictMode, null,\n    react_1.default.createElement(App_1.default, null)));\n\n\n//# sourceURL=webpack://my-site/./src/index.tsx?");
-
-/***/ }),
-
-/***/ "./src/pages/RandomNumber.tsx":
-/*!************************************!*\
-  !*** ./src/pages/RandomNumber.tsx ***!
-  \************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nconst RandomNumber = () => {\n    const RandomNumber = () => {\n        const min = Number(prompt(\"최소 숫자\"));\n        const max = Number(prompt(\"최대 숫자\"));\n        const n = Number(prompt(\"숫자 개수\"));\n        let Arr = []; //숫자 배열\n        for (let i = 0; i < n; i++) {\n            Arr.push(Math.floor(Math.random() * (max - min + 1) + min));\n        }\n        alert(Arr);\n    };\n    return (react_1.default.createElement(\"main\", null,\n        react_1.default.createElement(\"button\", { onClick: RandomNumber }, \"\\uB79C\\uB364 \\uC22B\\uC790\")));\n};\nexports[\"default\"] = RandomNumber;\n\n\n//# sourceURL=webpack://my-site/./src/pages/RandomNumber.tsx?");
 
 /***/ })
 
